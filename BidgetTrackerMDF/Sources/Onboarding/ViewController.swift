@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
 
 // MARK: - UI elements
     private lazy var labelBold: UILabel = {
@@ -56,6 +56,16 @@ class ViewController: UIViewController {
         button.backgroundColor = UIColor(red: 1, green: 0.2, blue: 0.471, alpha: 1)
         return button
     }()
+    
+    private lazy var pageControl: UIPageControl = {
+        let pageControl = UIPageControl()
+        pageControl.numberOfPages = 3
+        pageControl.currentPage = 3
+        pageControl.tintColor = .lightGray
+        pageControl.pageIndicatorTintColor = .darkGray
+        pageControl.currentPageIndicatorTintColor = .systemPink
+        return pageControl
+    }()
 
 // MARK: - LifeCycle
     
@@ -76,6 +86,7 @@ class ViewController: UIViewController {
     func setupHierarchy(){
         view.addSubview(imageView)
         view.addSubview(smallView)
+        view.addSubview(pageControl)
         smallView.addSubview(labelBold)
         smallView.addSubview(longLabel)
         smallView.addSubview(button)
@@ -115,6 +126,13 @@ class ViewController: UIViewController {
             make.left.equalTo(smallView.snp.left).offset(45)
             make.right.equalTo(smallView.snp.right).inset(45)
             make.height.equalTo(48)
+        }
+        
+        pageControl.snp.makeConstraints { make in
+            make.left.equalTo(view.snp.left)
+            make.right.equalTo(view.snp.right)
+            make.bottom.equalTo(smallView.snp.top).offset(-35)
+            make.top.equalTo(imageView.snp.bottom).offset(113)
         }
     }
     
