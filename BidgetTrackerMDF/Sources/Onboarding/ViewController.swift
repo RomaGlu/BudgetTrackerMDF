@@ -52,6 +52,7 @@ class ViewController: UIViewController{
     private lazy var button: UIButton = {
        let button = UIButton()
         button.layer.cornerRadius = 10
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         button.setTitle("I'm interested", for: .normal)
         button.backgroundColor = UIColor(red: 1, green: 0.2, blue: 0.471, alpha: 1)
         return button
@@ -137,6 +138,12 @@ class ViewController: UIViewController{
     }
     
 // MARK: - Actions
+    
+    @objc private func buttonTapped() {
+        let viewController = SettingsTableViewController()
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.pushViewController(viewController, animated: true)
+    }
     
 }
 
