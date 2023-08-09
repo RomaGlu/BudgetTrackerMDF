@@ -65,7 +65,7 @@ class SettingTableViewCell: UITableViewCell {
         let label = UILabel()
         label.backgroundColor = .systemBackground
         label.font = UIFont.systemFont(ofSize: 12)
-        label.textColor = .lightGray
+        label.textColor = .systemGray3
         label.numberOfLines = 1
         label.textAlignment = .left
         return label
@@ -79,13 +79,15 @@ class SettingTableViewCell: UITableViewCell {
     private lazy var versionLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12)
+        label.textColor = .systemGray3
         label.textAlignment = .right
         return label
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.backgroundColor = .systemBackground
+        contentView.backgroundColor = .clear
+        
         setupHierarchy()
         setupLayout()
     }
@@ -102,7 +104,8 @@ class SettingTableViewCell: UITableViewCell {
     }
     
     func setupHierarchy() {
-        contentView.addSubview(settingImage)
+        contentView.addSubview(settingBackgroundImage)
+        settingBackgroundImage.addSubview(settingImage)
         contentView.addSubview(settingLabel)
         contentView.addSubview(settingDescriptionLabel)
         contentView.addSubview(switcher)
@@ -111,14 +114,23 @@ class SettingTableViewCell: UITableViewCell {
     
     func setupLayout() {
         
-        settingImage.snp.makeConstraints { make in
-            make.top.left.bottom.equalTo(contentView)
+        settingBackgroundImage.snp.makeConstraints { make in
+            make.top.equalTo(contentView.snp.top).offset(16)
+            make.left.equalTo(contentView.snp.left)
+            make.height.equalTo(48)
             make.width.equalTo(48)
+        }
+        
+        settingImage.snp.makeConstraints { make in
+            make.top.equalTo(settingBackgroundImage.snp.top).offset(12)
+            make.left.equalTo(settingBackgroundImage.snp.left).offset(12)
+            make.width.equalTo(24)
+            make.height.equalTo(24)
         }
         
         settingLabel.snp.makeConstraints { make in
             make.left.equalTo(settingImage.snp.right).offset(19)
-            make.top.equalTo(contentView.snp.top)
+            make.top.equalTo(contentView.snp.top).offset(18)
             make.height.equalTo(20)
             make.width.equalTo(153)
         }
@@ -126,12 +138,12 @@ class SettingTableViewCell: UITableViewCell {
         settingDescriptionLabel.snp.makeConstraints { make in
             make.left.equalTo(settingImage.snp.right).offset(19)
             make.top.equalTo(settingLabel.snp.bottom).offset(10)
-            make.bottom.equalTo(contentView.snp.bottom)
+            make.bottom.equalTo(contentView.snp.bottom).offset(-19)
         }
         
         switcher.snp.makeConstraints { make in
             make.left.equalTo(settingImage.snp.right).offset(232)
-            make.centerY.equalTo(contentView.snp.centerY)
+            make.top.equalTo(contentView.snp.top).offset(25)
             make.width.equalTo(44)
             make.height.equalTo(20)
         }

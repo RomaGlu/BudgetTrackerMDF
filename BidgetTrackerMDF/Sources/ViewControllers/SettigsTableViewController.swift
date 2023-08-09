@@ -15,35 +15,26 @@ class SettingsTableViewController: UIViewController {
     
 //    MARK: - Outlets
     
+    private lazy var pinkView: UIView = {
+        let view = ReusableView()
+        return view
+    }()
+    
     private lazy var settingsTableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .grouped)
+        let tableView = UITableView(frame: .zero, style: .plain)
         tableView.register(SettingTableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.backgroundColor = .systemBackground
+        tableView.backgroundColor = .clear
+        tableView.tintColor = .clear
         return tableView
     }()
     
-    private lazy var pinkView: UIView = {
-        let pinkView = UIView()
-        pinkView.backgroundColor = .systemPink
-        pinkView.layer.cornerRadius = 20
-        return pinkView
-    }()
-    
-    private lazy var bellImage: UIImageView = {
-        let imageView = UIImageView()
-        let image = UIImage(named: "bell")
-        imageView.image = image
-        return imageView
-    }()
-   
 //    MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         settings = TableViewModel.settings
-        view.backgroundColor = .systemBackground
         title = "Settings"
         navigationController?.navigationBar.prefersLargeTitles = true
         setupView()
@@ -59,7 +50,6 @@ class SettingsTableViewController: UIViewController {
     
     func setupHierarchy() {
         view.addSubview(pinkView)
-        view.addSubview(bellImage)
         view.addSubview(settingsTableView)
     }
     
@@ -68,22 +58,15 @@ class SettingsTableViewController: UIViewController {
         pinkView.snp.makeConstraints { make in
             make.left.equalTo(view.snp.left).offset(25)
             make.right.equalTo(view.snp.right).offset(-25)
-            make.top.equalTo(view.snp.top).offset(140)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(24)
             make.height.equalTo(88)
         }
         
-        bellImage.snp.makeConstraints { make in
-            make.left.equalTo(view.snp.left).offset(260)
-            make.bottom.equalTo(pinkView.snp.bottom).offset(-27)
-            make.height.equalTo(72)
-            make.width.equalTo(72)
-        }
-        
         settingsTableView.snp.makeConstraints { make in
-            make.top.equalTo(pinkView.snp.bottom).offset(46)
+            make.top.equalTo(pinkView.snp.bottom).offset(28)
             make.left.equalTo(view.snp.left).offset(25)
             make.right.equalTo(view.snp.right).offset(-25)
-            make.bottom.equalTo(view)
+            make.bottom.equalToSuperview()
         }
         
     }
@@ -101,7 +84,7 @@ extension SettingsTableViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? SettingTableViewCell
-        cell?.backgroundColor = .systemBackground
+        cell?.backgroundColor = .clear
         cell?.settings = settings?[indexPath.row]
         return cell ?? UITableViewCell()
     }

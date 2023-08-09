@@ -22,7 +22,7 @@ class ViewController: UIViewController{
     private lazy var longLabel: UILabel = {
         let longLabel = UILabel()
         longLabel.numberOfLines = 0
-        longLabel.font = UIFont(name: "GT-Walsheim-Pro", size: 14)
+        longLabel.font = UIFont(name: "GT-Walsheim-Pro", size: 6)
         longLabel.textAlignment = .center
         longLabel.text = "Being the savage's bowsman, that is, the person who pulled the bow-oar in."
         longLabel.textColor = UIColor(red: 0.108, green: 0.127, blue: 0.18, alpha: 1)
@@ -110,16 +110,16 @@ class ViewController: UIViewController{
         
         labelBold.snp.makeConstraints { make in
             make.left.equalTo(smallView.snp.left).offset(95)
-            make.right.equalTo(smallView.snp.right).inset(95)
             make.top.equalTo(smallView.snp.top).offset(34.5)
             make.width.equalTo(154)
+            make.height.equalTo(28)
         }
         
         longLabel.snp.makeConstraints { make in
             make.left.equalTo(smallView.snp.left).offset(29)
-            make.right.equalTo(smallView.snp.right).offset(-29)
-            make.top.equalTo(labelBold.snp.bottom).offset(80.5)
+            make.top.equalTo(labelBold.snp.bottom).offset(18)
             make.width.equalTo(287)
+            make.height.equalTo(46)
         }
         
         button.snp.makeConstraints { make in
@@ -141,8 +141,7 @@ class ViewController: UIViewController{
     
     @objc private func buttonTapped() {
         let viewController = SettingsTableViewController()
-        let navigationController = UINavigationController(rootViewController: viewController)
-        navigationController.pushViewController(viewController, animated: true)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
 }
