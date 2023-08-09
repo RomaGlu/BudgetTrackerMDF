@@ -10,6 +10,15 @@
 		E0ACC9812A55D7E1009E1725 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACC9802A55D7E1009E1725 /* TableViewModel.swift */; };
 		E0ACC9842A55D918009E1725 /* SettigsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACC9832A55D918009E1725 /* SettigsTableViewController.swift */; };
 		E0ACC9862A55DEAD009E1725 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ACC9852A55DEAD009E1725 /* SettingTableViewCell.swift */; };
+		E0D0F2882A7ABDB8008CB9D3 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D0F2872A7ABDB8008CB9D3 /* ReusableView.swift */; };
+		E0D0F28B2A7ADB60008CB9D3 /* GTWalsheimPro-BoldOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E0D0F28A2A7ADB60008CB9D3 /* GTWalsheimPro-BoldOblique.ttf */; };
+		E0D0F28D2A7ADB6F008CB9D3 /* GTWalsheimPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E0D0F28C2A7ADB6F008CB9D3 /* GTWalsheimPro-Regular.ttf */; };
+		E0D0F2902A7ADC37008CB9D3 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D0F28F2A7ADC37008CB9D3 /* UIFont+Extension.swift */; };
+		E0D0F2922A7ADCE0008CB9D3 /* GTWalsheimPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E0D0F2912A7ADCE0008CB9D3 /* GTWalsheimPro-Bold.ttf */; };
+		E0DEC72E2A83F4700069D86F /* CategoryCollectionItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DEC72D2A83F4700069D86F /* CategoryCollectionItems.swift */; };
+		E0DEC7302A83F4C60069D86F /* CategoryCollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DEC72F2A83F4C60069D86F /* CategoryCollectionModel.swift */; };
+		E0DEC7322A83F9090069D86F /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DEC7312A83F9090069D86F /* CollectionView.swift */; };
+		E0DEC7342A83FB2E0069D86F /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0DEC7332A83FB2E0069D86F /* CollectionViewController.swift */; };
 		E0F2B87D2A3A1E170060C9AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F2B87C2A3A1E170060C9AE /* AppDelegate.swift */; };
 		E0F2B87F2A3A1E170060C9AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F2B87E2A3A1E170060C9AE /* SceneDelegate.swift */; };
 		E0F2B8812A3A1E170060C9AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F2B8802A3A1E170060C9AE /* ViewController.swift */; };
@@ -22,6 +31,15 @@
 		E0ACC9802A55D7E1009E1725 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		E0ACC9832A55D918009E1725 /* SettigsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettigsTableViewController.swift; sourceTree = "<group>"; };
 		E0ACC9852A55DEAD009E1725 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		E0D0F2872A7ABDB8008CB9D3 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		E0D0F28A2A7ADB60008CB9D3 /* GTWalsheimPro-BoldOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-BoldOblique.ttf"; sourceTree = "<group>"; };
+		E0D0F28C2A7ADB6F008CB9D3 /* GTWalsheimPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Regular.ttf"; sourceTree = "<group>"; };
+		E0D0F28F2A7ADC37008CB9D3 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		E0D0F2912A7ADCE0008CB9D3 /* GTWalsheimPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Bold.ttf"; sourceTree = "<group>"; };
+		E0DEC72D2A83F4700069D86F /* CategoryCollectionItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionItems.swift; sourceTree = "<group>"; };
+		E0DEC72F2A83F4C60069D86F /* CategoryCollectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionModel.swift; sourceTree = "<group>"; };
+		E0DEC7312A83F9090069D86F /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		E0DEC7332A83FB2E0069D86F /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		E0F2B8792A3A1E170060C9AE /* BidgetTrackerMDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BidgetTrackerMDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F2B87C2A3A1E170060C9AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0F2B87E2A3A1E170060C9AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,8 +65,45 @@
 			isa = PBXGroup;
 			children = (
 				E0ACC9802A55D7E1009E1725 /* TableViewModel.swift */,
+				E0DEC72F2A83F4C60069D86F /* CategoryCollectionModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E0D0F2862A7ABDAB008CB9D3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0D0F2872A7ABDB8008CB9D3 /* ReusableView.swift */,
+				E0DEC7312A83F9090069D86F /* CollectionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E0D0F2892A7ADAA4008CB9D3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E0D0F28A2A7ADB60008CB9D3 /* GTWalsheimPro-BoldOblique.ttf */,
+				E0D0F28C2A7ADB6F008CB9D3 /* GTWalsheimPro-Regular.ttf */,
+				E0D0F2912A7ADCE0008CB9D3 /* GTWalsheimPro-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E0D0F28E2A7ADC1E008CB9D3 /* Extencion */ = {
+			isa = PBXGroup;
+			children = (
+				E0D0F28F2A7ADC37008CB9D3 /* UIFont+Extension.swift */,
+			);
+			path = Extencion;
+			sourceTree = "<group>";
+		};
+		E0DEC72C2A83F4410069D86F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E0ACC9852A55DEAD009E1725 /* SettingTableViewCell.swift */,
+				E0DEC72D2A83F4700069D86F /* CategoryCollectionItems.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		E0F2B8702A3A1E170060C9AE = {
@@ -79,10 +134,12 @@
 		E0F2B8902A3A21E90060C9AE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E0DEC72C2A83F4410069D86F /* Cells */,
+				E0D0F28E2A7ADC1E008CB9D3 /* Extencion */,
 				E0ACC9822A55D7EB009E1725 /* Models */,
-				E0F2B8932A3A22C30060C9AE /* Onboarding */,
+				E0F2B8932A3A22C30060C9AE /* ViewControllers */,
 				E0F2B8922A3A22010060C9AE /* App */,
-				E0ACC9852A55DEAD009E1725 /* SettingTableViewCell.swift */,
+				E0D0F2862A7ABDAB008CB9D3 /* Views */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -91,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				E0F2B8852A3A1E180060C9AE /* Assets.xcassets */,
+				E0D0F2892A7ADAA4008CB9D3 /* Fonts */,
 				E0F2B8872A3A1E180060C9AE /* LaunchScreen.storyboard */,
 				E0F2B88A2A3A1E180060C9AE /* Info.plist */,
 			);
@@ -106,13 +164,14 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		E0F2B8932A3A22C30060C9AE /* Onboarding */ = {
+		E0F2B8932A3A22C30060C9AE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				E0F2B8802A3A1E170060C9AE /* ViewController.swift */,
 				E0ACC9832A55D918009E1725 /* SettigsTableViewController.swift */,
+				E0DEC7332A83FB2E0069D86F /* CollectionViewController.swift */,
 			);
-			path = Onboarding;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +239,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0F2B8892A3A1E180060C9AE /* LaunchScreen.storyboard in Resources */,
+				E0D0F2922A7ADCE0008CB9D3 /* GTWalsheimPro-Bold.ttf in Resources */,
+				E0D0F28B2A7ADB60008CB9D3 /* GTWalsheimPro-BoldOblique.ttf in Resources */,
+				E0D0F28D2A7ADB6F008CB9D3 /* GTWalsheimPro-Regular.ttf in Resources */,
 				E0F2B8862A3A1E180060C9AE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,11 +253,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0DEC7342A83FB2E0069D86F /* CollectionViewController.swift in Sources */,
 				E0ACC9862A55DEAD009E1725 /* SettingTableViewCell.swift in Sources */,
 				E0F2B8812A3A1E170060C9AE /* ViewController.swift in Sources */,
 				E0F2B87D2A3A1E170060C9AE /* AppDelegate.swift in Sources */,
 				E0F2B87F2A3A1E170060C9AE /* SceneDelegate.swift in Sources */,
 				E0ACC9842A55D918009E1725 /* SettigsTableViewController.swift in Sources */,
+				E0DEC7302A83F4C60069D86F /* CategoryCollectionModel.swift in Sources */,
+				E0DEC72E2A83F4700069D86F /* CategoryCollectionItems.swift in Sources */,
+				E0D0F2882A7ABDB8008CB9D3 /* ReusableView.swift in Sources */,
+				E0D0F2902A7ADC37008CB9D3 /* UIFont+Extension.swift in Sources */,
+				E0DEC7322A83F9090069D86F /* CollectionView.swift in Sources */,
 				E0ACC9812A55D7E1009E1725 /* TableViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
