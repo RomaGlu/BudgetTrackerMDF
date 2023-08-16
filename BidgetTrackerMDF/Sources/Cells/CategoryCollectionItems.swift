@@ -21,26 +21,12 @@ class CategoryCollectionItems: UICollectionViewCell {
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 5
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         imageView.backgroundColor = .systemBackground
         imageView.clipsToBounds = true
         return imageView
     }()
-    
-//    private lazy var searchImage: UIImageView = {
-//        let imageView = UIImageView()
-//        let image = UIImage(named: "search")
-//        imageView.image = image
-//        return imageView
-//    }()
-//
-//    private lazy var ovalImage: UIImageView = {
-//        let imageView = UIImageView()
-//        let image = UIImage(named: "Oval 1")
-//        imageView.image = image
-//        return imageView
-//    }()
-//
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -58,27 +44,12 @@ class CategoryCollectionItems: UICollectionViewCell {
     
     func setupHierarchy() {
         contentView.addSubview(imageView)
-//        contentView.addSubview(ovalImage)
-//        ovalImage.addSubview(searchImage)
     }
     
     func setupLayout() {
         imageView.snp.makeConstraints { make in
-            make.top.left.right.equalTo(contentView)
-            make.bottom.equalTo(contentView.snp.bottom).offset(-35)
-            make.width.equalTo(48)
-            make.height.equalTo(48)
+            make.top.left.right.bottom.equalTo(contentView)
         }
-        
-//        ovalImage.snp.makeConstraints { make in
-//            make.top.left.right.bottom.equalTo(contentView)
-//        }
-//        
-//        searchImage.snp.makeConstraints { make in
-//            make.centerX.equalTo(ovalImage.snp.centerX)
-//            make.centerY.equalTo(ovalImage.snp.centerY)
-//            
-//        }
     }
     
     func configuration(model: CompositionalModel) {

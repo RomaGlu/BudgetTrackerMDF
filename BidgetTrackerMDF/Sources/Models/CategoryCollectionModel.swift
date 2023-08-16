@@ -40,7 +40,6 @@ extension CompositionalModel {
          CompositionalModel(image: "plane"),
          CompositionalModel(image: "tools"),
          CompositionalModel(image: "Group 33"),
-         CompositionalModel(image: "Oval 1"),
-         CompositionalModel(image: "search")]
+         CompositionalModel(image: "add")]
     ]
 }

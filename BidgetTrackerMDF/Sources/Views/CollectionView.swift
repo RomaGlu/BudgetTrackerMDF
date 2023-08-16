@@ -35,6 +35,7 @@ class CollectionView: UIView {
         button.setTitle("Save", for: .normal)
         button.backgroundColor = UIColor(red: 1, green: 0.2, blue: 0.47, alpha: 1)
         button.layer.cornerRadius = 10
+        button.setTitleColor(.systemBackground, for: .normal)
        return button
     }()
     
@@ -104,7 +105,7 @@ class CollectionView: UIView {
 
         collectionView.snp.makeConstraints { make in
             make.left.equalTo(self.snp.left).offset(36)
-            make.right.equalTo(self.snp.right).offset(39)
+            make.right.equalTo(self.snp.right).offset(-39)
             make.top.equalTo(selectIconLabel.snp.bottom).offset(13)
             make.bottom.equalTo(saveButton.snp.top).offset(-42)
         }
